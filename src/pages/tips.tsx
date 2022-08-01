@@ -14,10 +14,10 @@ function TipsPage({ data }: TipsPageProps) {
 
       <ul className="grid grid-cols-2 gap-6 items-stretch">
         {data.allMdx.nodes.map((n) => (
-          <li key={n.slug}>
+          <li key={n.slug} className="col-span-2 md:col-span-1">
             <Link
               to={`/tip/${n.slug}/`}
-              className="col-span-2 md:col-span-1 hover:scale-105 transition-all [@media(any-hover:hover)]:hover:shadow-2xl block"
+              className="hover:scale-105 transition-all [@media(any-hover:hover)]:hover:shadow-2xl block"
             >
               <article className="bg-slate-900 px-8 py-7 rounded-2xl">
                 <h2 className="text-3xl text-amber-500 inline-block mb-2 font-semibold">
