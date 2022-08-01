@@ -9,14 +9,14 @@ const links = [
     title: "Projects",
   },
   {
-    to: "/tips",
+    to: "/tips/",
     title: "Tips",
   },
 ] as const;
 
 const linksMap = {
   "/": "/project",
-  "/tips": "/tip",
+  "/tips/": "/tip",
 } as const;
 
 function isPartiallyCurrent({
