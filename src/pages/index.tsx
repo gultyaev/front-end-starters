@@ -14,11 +14,17 @@ const IndexPage = ({ data }: IndexPageProps) => {
       <H1>Projects</H1>
 
       <P>
-        This page contains a bunch of projects that are API services aimed to
-        help beginner front-end developers to learn by practice. Also, projects
-        target real life-like scenarios, so the experience earned by
-        implementing the front-end part and connecting with an API will be
-        viable.
+        This page contains projects that are API services aimed to help beginner
+        front-end developers to learn by practice. Also, projects target real
+        life-like scenarios, so the experience earned by implementing the
+        front-end part and connecting with an API will be viable.
+      </P>
+
+      <P>
+        Projects on this page can provide you with the idea for pet projects to
+        show off your skills. They can challenge you to learn new technologies,
+        which you might have never touched if you were building a pet project
+        with no back-end.
       </P>
 
       <P>
