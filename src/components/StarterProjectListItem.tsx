@@ -35,7 +35,7 @@ function StarterProjectListItem({ data }: StarterProjectListItemProps) {
       className="[@media(any-hover:hover)]:hover:scale-105 transition-all hover:shadow-2xl block"
     >
       <article className="flex flex-col bg-slate-900 px-8 py-7 rounded-2xl">
-        <h2 className="text-3xl mb-6 text-amber-500 self-start font-semibold">
+        <h2 className="text-3xl mb-6 text-orange-500 self-start font-semibold">
           {data.frontmatter.title}
         </h2>
         <P>{data.frontmatter.description}</P>
