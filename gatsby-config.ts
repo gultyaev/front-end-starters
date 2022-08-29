@@ -77,7 +77,6 @@ const config: GatsbyConfig = {
       },
     },
     "gatsby-plugin-postcss",
-    "gatsby-plugin-react-helmet",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
   ],

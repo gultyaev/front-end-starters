@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import * as React from "react";
 import Layout from "../components/Layout";
+import { Seo } from "../components/Layout/Seo";
 
 const headingStyles = {
   marginTop: 0,
@@ -44,5 +45,7 @@ const NotFoundPage = () => {
     </Layout>
   );
 };
+
+export const Head = () => <Seo></Seo>;
 
 export default NotFoundPage;

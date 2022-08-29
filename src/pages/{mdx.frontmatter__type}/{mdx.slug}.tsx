@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
 import Layout from "../../components/Layout";
+import { Seo } from "../../components/Layout/Seo";
 import { layoutPrimitives } from "../../components/Primitives";
 
 interface StarterProjectPageProps {
@@ -11,10 +12,7 @@ interface StarterProjectPageProps {
 
 function StarterProjectPage({ data }: StarterProjectPageProps) {
   return (
-    <Layout
-      title={data.mdx?.frontmatter?.title}
-      description={data.mdx?.frontmatter?.description}
-    >
+    <Layout title={data.mdx?.frontmatter?.title}>
       <article>
         <MDXProvider components={layoutPrimitives}>
           <MDXRenderer>{data.mdx?.body || ""}</MDXRenderer>
@@ -25,6 +23,13 @@ function StarterProjectPage({ data }: StarterProjectPageProps) {
 }
 
 export default StarterProjectPage;
+
+export const Head = ({ data }: StarterProjectPageProps) => (
+  <Seo
+    title={data.mdx?.frontmatter?.title}
+    description={data.mdx?.frontmatter?.description}
+  ></Seo>
+);
 
 export const query = graphql`
   query StarterProjectPage($id: String) {

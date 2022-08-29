@@ -1,6 +1,7 @@
 import { graphql, Link } from "gatsby";
 import React from "react";
 import Layout from "../components/Layout";
+import { Seo } from "../components/Layout/Seo";
 import { H1, P } from "../components/Primitives";
 
 interface TipsPageProps {
@@ -37,6 +38,13 @@ function TipsPage({ data }: TipsPageProps) {
 }
 
 export default TipsPage;
+
+export const Head = () => (
+  <Seo
+    title="Tips"
+    description="Tips to help beginner developers become more efficient"
+  ></Seo>
+);
 
 export const query = graphql`
   query Tips {

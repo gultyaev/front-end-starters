@@ -1,6 +1,7 @@
 import { graphql } from "gatsby";
 import * as React from "react";
 import Layout from "../components/Layout";
+import { Seo } from "../components/Layout/Seo";
 import { H1, P } from "../components/Primitives";
 import StarterProjectListItem from "../components/StarterProjectListItem";
 
@@ -10,7 +11,7 @@ interface IndexPageProps {
 
 const IndexPage = ({ data }: IndexPageProps) => {
   return (
-    <Layout description="API services aimed to help beginner front-end developers to learn by practice">
+    <Layout>
       <H1>Projects</H1>
 
       <P>
@@ -48,6 +49,10 @@ const IndexPage = ({ data }: IndexPageProps) => {
 };
 
 export default IndexPage;
+
+export const Head = () => (
+  <Seo description="API services aimed to help beginner front-end developers to learn by practice"></Seo>
+);
 
 export const query = graphql`
   query StarterProjects {
